@@ -1,0 +1,34 @@
+package com.mirzoev.kontrolnaya.services;
+
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.prytkin.flights.models.Cities;
+import com.prytkin.flights.repositories.CitiesRepository;
+
+import jakarta.transaction.Transactional;
+
+@Transactional
+@Service
+public class FilmServisec {
+    @Autowired
+    private FilmRep filmRep;
+
+
+    public List<Film> getAllFilm(){
+        return filmRep.findAll();
+    }
+
+    public Film getFilmById(Long id){
+        return filmRep.findById(id).get();
+    }
+
+    public void saveFilm(Film film){
+        filmRep.save(film);
+    }
+
+    public void deleteFilm(Long id){
+        filmRep.deleteById(id);
+    }
+}

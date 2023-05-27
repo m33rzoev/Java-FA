@@ -1,0 +1,24 @@
+package com.mirzoev.kontrolnaya.models;
+
+public enum Genre {
+    ACTION("Action"),
+    COMEDY("Comedy"),
+    DRAMA("Drama"),
+    ROMANCE("Romance"),
+    THRILLER("Thriller"),
+    HORROR("Horror"),
+    SCIENCE_FICTION("Science Fiction"),
+    FANTASY("Fantasy"),
+    ANIMATION("Animation"),
+    DOCUMENTARY("Documentary");
+
+    private String displayName;
+
+    Genre(String displayName) {
+        this.displayName = displayName;
+    }
+
+    public String getDisplayName() {
+        return displayName;
+    }
+}

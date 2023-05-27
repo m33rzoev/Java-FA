@@ -1,0 +1,7 @@
+package com.mirzoev.kontrolnaya.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import com.mirzoev.kontrolnaya.models.Film;
+
+public interface FilmRep extends JpaRepository<Film, Long> {
+}
